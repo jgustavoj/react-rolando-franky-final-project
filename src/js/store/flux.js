@@ -128,9 +128,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			backlogAdd: () => {
 				const store = getStore();
-				let plat = store.game.platforms;
+				let gamePlat = store.game.platforms;
 				const getPlatforms = platforms => {
-					return platforms.map(plat => plat.platform.name).toString();
+					return platforms.map(gamePlat => gamePlat.platform.name).toString();
 				};
 				let gameTag = store.game.tags;
 				const getTags = tag => {
@@ -148,7 +148,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify({
 						game_id: store.game.id,
 						game_name: store.game.name,
-						game_platform: getPlatforms(plat),
+						game_platform: getPlatforms(gamePlat),
 						game_genre: getGenre(gameGenre),
 						game_tags: getTags(gameTag),
 						game_notes: "notes",

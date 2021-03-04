@@ -28,7 +28,7 @@ export const Home = () => {
 	if (store.sortedGameList[0] != undefined) {
 		if (store.sortedGameList[0].name != undefined) {
 			return (
-				<Container fluid>
+				<Container>
 					<Row>
 						<Col>
 							<GameCarousel />
